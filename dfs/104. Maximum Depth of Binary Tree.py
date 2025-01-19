@@ -24,7 +24,6 @@ def build_tree(data):
 
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-
         res = 0
         def dfs(node, _sum=0):
             nonlocal res
@@ -34,12 +33,11 @@ class Solution:
             _sum += 1
             dfs(node.left, _sum)            
             dfs(node.right, _sum)           
-            print(node.val, _sum, res)
         dfs(root, 0)
         return res
             
-tree = build_tree([1,2,3,4,5,None,8,None,None,6,7,9])
+tree = build_tree([3,9,20,None,None,15,7])
 
 solution = Solution()
 result = solution.maxDepth(tree)
-print("Preorder Traversal Result:", result)
+print("maxDepth:", result)

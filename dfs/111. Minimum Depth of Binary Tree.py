@@ -25,6 +25,8 @@ def build_tree(data):
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
 
+        from collections import deque
+
         res = 100000000000000
         def dfs(node, s=0):
             nonlocal res
@@ -37,7 +39,8 @@ class Solution:
             dfs(node.left, s+1)         
             dfs(node.right, s+1)
 
-            
+        if not root:
+            return 0
         dfs(root)
         return res
             
