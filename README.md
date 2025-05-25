@@ -56,6 +56,6 @@ print("Menor elemento:", heapq.heappop(heap))  # Remove e retorna o menor elemen
 nums = [10, 2, 14, 7, 5]
 heapq.heapify(nums)
 
-print("Menor elemento após heapify:", heapq.heappop(nums))  # Retorna 2
+print("Menor el após heapify:", heapq.heappop(nums))  # Retorna 2
 ```
 
